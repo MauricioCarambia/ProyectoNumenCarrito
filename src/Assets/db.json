@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Motorola G9",
+      "price": 80000
+    },
+    {
+      "id": 2,
+      "name": "Iphone 12",
+      "price": 200000
+    },
+    {
+      "id": 3,
+      "name": "Samsung S23",
+      "price": 150000
+    },
+    {
+      "id": 4,
+      "name": "Nokia 1100",
+      "price": 1000000
+    },
+    {
+      "id": 5,
+      "name": "Xiaomi Redmi 10",
+      "price": 100000
+    },
+    {
+      "id": 6,
+      "name": "Motorola E",
+      "price": 50000
+    }
+  ],
+  "cart": []
+}
