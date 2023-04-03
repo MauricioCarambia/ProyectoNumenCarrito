@@ -1,14 +1,14 @@
 import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
-import Nav from "./Components/Nav";
-
+import NavBar from "./Components/NavBar";
 
 
 function App() {
   return (
-    <><Nav/>
-    <Cards/>
-  <Footer/>
+    <>
+      <NavBar/>
+      <Cards />
+      <Footer />
     </>
   );
 }
