@@ -29,6 +29,16 @@
       "id": 6,
       "name": "Motorola E",
       "price": 50000
+    },
+    {
+      "id": 7,
+      "name": "Tablet Samsung",
+      "price": 150000
+    },
+    {
+      "id": 8,
+      "name": "Notebooks Dell",
+      "price": 250000
     }
   ],
   "cart": []
