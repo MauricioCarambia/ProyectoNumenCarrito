@@ -35,22 +35,25 @@ const Navbar = () => {
         </li>
         
       </ul>
-      <div  >
+      
       <li class="nav-item dropdown" style={navLog} >
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Mi cuenta
           </a>
           <ul style={ulLog} class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <form style={styleFormLog}>
           <label style={label} for="usuario" >Usuario<input style={inputLog} id="usuario" type="text"></input></label>
           <label style={label} for="password" >Contraseña<input style={inputLog}  id="password" type="password"></input></label>
           <div style={divLog} >
           <button style={buttonLog} >Ingresar</button>
           <button style={buttonReg}>Registrate</button>
+          
           </div>
+          </form>
           </ul>
           
         </li>
-        </div>
+        
     </div>
   </div>
 </nav>
@@ -59,10 +62,13 @@ const Navbar = () => {
 
 export default Navbar
 
-const inputLog={width:"100%"}
+
+
+const styleFormLog={display:"flex" , flexDirection:"column"}
+const inputLog={width:"100%", margin:'auto' ,  }
 const label= {color:"white"}
-const navLog = {border:"solid 1px grey" , padding:"10px 50px 10px 50px",display:"flex", flexWrap:"nowrap", justifyContent:"center", marginRight:"50px"}
+const navLog = {border:"solid 1px grey" , padding:"10px 50px 10px 50px", display:"flex",flexWrap:"nowrap", justifyContent:"center", marginRight:"50px"}
 const ulLog ={ backgroundColor:"grey" , width:"100%" }
 const divLog={display:"flex", flexDirection:"column"}
-const buttonLog={ backgroundColor:"skyblue", width:"100px", margin:"10px auto 0px auto" }
-const buttonReg={color:"white",backgroundColor:"black",width:"100px", margin:"10px auto 0px auto"}
+const buttonLog={ backgroundColor:"skyblue", width:"100px", margin:"10px auto 0px auto" , border:"5px" , borderRadius:"50px", padding:"5px" }
+const buttonReg={color:"white",backgroundColor:"black",width:"100px", margin:"10px auto 0px auto",border:"5px" , borderRadius:"50px",padding:"5px"}
