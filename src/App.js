@@ -7,8 +7,9 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <>
-    <CardsProductos/>
-    <Navbar />
+      <Navbar />
+      <CardsProductos />
+
     </>
   );
 }
