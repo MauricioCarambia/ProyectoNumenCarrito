@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.buttonLog{
+  transition: background-color .5s;
+}
+.buttonLog:hover{
+  background-color: aqua;
+}
+.buttonReg{
+  transition: background-color .5s;
+}
+.buttonReg:hover{
+  background-color: black;
+  color: white;
+}
+
+
