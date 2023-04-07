@@ -17,26 +17,26 @@ const Navbar = () => {
           <a class="nav-link active" aria-current="page" href="#">Home/inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Productos
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Articulo #1</a></li>
-            <li><a class="dropdown-item" href="#">Articulo #2</a></li>
-            <li><a class="dropdown-item" href="#">Articulo #3</a></li>
-            <li><a class="dropdown-item" href="#">Articulo #4</a></li>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a  className="dropdown-item" href="#">Articulo #1</a></li>
+            <li><a  className="dropdown-item" href="#">Articulo #2</a></li>
+            <li><a className="dropdown-item" href="#">Articulo #3</a></li>
+            <li><a className="dropdown-item" href="#">Articulo #4</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Nosotros</a>
+          <a id="buttonNav" className="nav-link active" href="#">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Contacto</a>
+          <a id="buttonNav" className="nav-link active" href="#">Contacto</a>
         </li>
         
       </ul>
       
-      <li class="nav-item dropdown" style={navLog} >
+      <li  className="micuenta" class="nav-item dropdown" style={navLog} >
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Mi cuenta
           </a>
@@ -45,8 +45,8 @@ const Navbar = () => {
           <label style={label} for="usuario" >Usuario<input style={inputLog} id="usuario" type="text"></input></label>
           <label style={label} for="password" >Contraseña<input style={inputLog}  id="password" type="password"></input></label>
           <div style={divLog} >
-          <button style={buttonLog} >Ingresar</button>
-          <button style={buttonReg}>Registrate</button>
+          <button className='buttonLog' style={buttonLog} >Ingresar</button>
+          <button className="buttonReg" style={buttonReg}>Registrate</button>
           
           </div>
           </form>
@@ -70,5 +70,5 @@ const label= {color:"white"}
 const navLog = {border:"solid 1px grey" , padding:"10px 50px 10px 50px", display:"flex",flexWrap:"nowrap", justifyContent:"center", marginRight:"50px"}
 const ulLog ={ backgroundColor:"grey" , width:"100%" }
 const divLog={display:"flex", flexDirection:"column"}
-const buttonLog={ backgroundColor:"skyblue", width:"100px", margin:"10px auto 0px auto" , border:"5px" , borderRadius:"50px", padding:"5px" }
-const buttonReg={color:"white",backgroundColor:"black",width:"100px", margin:"10px auto 0px auto",border:"5px" , borderRadius:"50px",padding:"5px"}
+const buttonLog={ width:"100px", margin:"10px auto 0px auto" , border:"5px" , borderRadius:"50px", padding:"5px" }
+const buttonReg={width:"100px", margin:"10px auto 0px auto",border:"5px" , borderRadius:"50px",padding:"5px"}
