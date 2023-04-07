@@ -1,20 +1,44 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Button from './Button'
 
-const CardsProductos = () => {
+
+
+const CardsProductos = (props) => {
     return (
-        <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1NCy2_YEOk1eg2ErwixdAUGQlIxZ2K3cMdieCURYmL9IhrhBXw0eZ26Yw5myZzlCsOIg&usqp=CAU" />
-            <Card.Body>
-                <Card.Title>Samsung S23</Card.Title>
-                <Card.Text>
-                    Maravilloso Samsung S23, lo ultimo en tecnologia.
-                </Card.Text>
-                <Button variant="primary">Agregar al carrito</Button>
-            </Card.Body>
-        </Card>
+        <figure style={card}>
+            <img style={imagen} src={props.card.img} alt="" />
+            <figcaption style={figcaption}>
+                <h3>{props.card.titulo}</h3>
+                <p>{props.card.precio}</p>
+            </figcaption>
+            <Button />
+        </figure>
     )
 }
 
 export default CardsProductos
+
+const card = {
+    heigth: "600px",
+    border: "2px solid royalblue",
+    borderRadius: "3px",
+    width: "300px",
+    padding: "30px",
+    margin:"20px",
+    display: "flex",
+    flexDirection: "column"
+}
+
+const imagen={
+    width:"200px",
+    heigth:"300px"
+}
+
+const figcaption={
+    padding:"20px 0px",
+    display:"flex",
+    flexDirection:"column",
+    alignItem:"center",
+    justifyContent:"center"
+}   
+
