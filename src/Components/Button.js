@@ -11,8 +11,8 @@ export default Button
 const boton = {
     backgroundColor: "royalblue",
     border: "none",
-    borderRadius:  "5px",
+    borderRadius: "5px",
     color: "white",
     padding: "5px 10px",
-    
+
 }

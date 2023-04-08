@@ -17,28 +17,3 @@ const CardsProductos = (props) => {
 }
 
 export default CardsProductos
-
-const card = {
-    heigth: "600px",
-    border: "2px solid royalblue",
-    borderRadius: "3px",
-    width: "300px",
-    padding: "30px",
-    margin:"20px",
-    display: "flex",
-    flexDirection: "column"
-}
-
-const imagen={
-    width:"200px",
-    heigth:"300px"
-}
-
-const figcaption={
-    padding:"20px 0px",
-    display:"flex",
-    flexDirection:"column",
-    alignItem:"center",
-    justifyContent:"center"
-}   
-

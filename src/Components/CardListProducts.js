@@ -19,11 +19,11 @@ const CardList = (props) => {
 
 export default CardList
 
-const list={
+const list = {
   display: "flex",
-  margin:"100px",
-  padding:"20px 100px",
-  flexDirection:"row",
+  margin: "100px",
+  padding: "20px 100px",
+  flexDirection: "row",
   flexWrap: "wrap",
-  justifyContent: "space-evenly",
+  justifyContent: "space-around"
 }
