@@ -5,11 +5,11 @@ const Inicio = () => {
   return (
     <div>
       <p>Carusel</p>
-    <h2>Productos destacados</h2>
-    <CardListProducts
-    data={products} />
-    <p>Medios de pago</p>
-    <p>Marcas que nos patrocinan</p>
+      <h2>Productos destacados</h2>
+      <CardListProducts
+        data={products} />
+      <p>Medios de pago</p>
+      <p>Marcas que nos patrocinan</p>
     </div>
   )
 }
@@ -38,7 +38,7 @@ const products = [
   },
   {
     id: 4,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn47kzZNBYnf8iC1qVXJATdVcFyMdAtEWETQ&usqp=CAU",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzy3f3U8OjJkrOdy54HpyOhI2I9yVa7vg6VA&usqp=CAU",
     titulo: "Nokia 1100",
     precio: "$1000000"
   },
@@ -56,7 +56,7 @@ const products = [
   },
   {
     id: 7,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jyRhddqUug7_b3QFktKoAYn1i4GNcqC5qyZyAkEpuzHMzIktA3EE1zuhObPp66VitxA&usqp=CAU",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFgwVJQPltD-OsfSkXQyYmPCEIzGDj-0YPX1SSQqf8ECnpsKRmnN18rY9iR8wqQATzdBY&usqp=CAU",
     titulo: "Samsung Galaxy S6 Lite",
     precio: "$150000"
   },
@@ -67,3 +67,4 @@ const products = [
     precio: "$250000"
   }
 ]
+

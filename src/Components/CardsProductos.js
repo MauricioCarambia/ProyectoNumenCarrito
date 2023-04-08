@@ -5,6 +5,7 @@ import Button from './Button'
 
 const CardsProductos = (props) => {
     return (
+       
         <figure style={cajacard}>
             <img style={imagen} src={props.card.img} alt="" />
             <figcaption style={textocard}>
@@ -29,6 +30,7 @@ const cajacard = {
     justifyContent: "space-around",
     alignItems: "center",
     border: "1px solid royalblue",
+    background: "white"
 }
 
 const imagen = {

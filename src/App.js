@@ -1,4 +1,4 @@
-
+import './App.css';
 
 import Rutas from "./Rutas/Rutas";
 
