@@ -1,4 +1,131 @@
-*{
-margin: 0;
-padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/******************* footer *****************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #ffffff;
+    background: #070C0D;
+}
+
+footer .footer-top {
+    border-bottom: 2px solid #686b6e;
+    padding: 40px;
+}
+
+footer .footer-top>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+footer h4>a{
+    /* margin: 0; */
+    color: #fffffD;
+    text-decoration: none;
+}
+
+
+footer .footer-bottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .legal {
+    font-size: 12px;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 2px;
+}
+
+footer .legal>p {
+    margin: 0 2px;
+}
+
+footer .legal>span {
+    margin-right: 10px;
+}
+
+footer .icons {
+    margin: 15px;
+}
+
+footer .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    padding: 10px;
+    align-items: space-between;
+    gap: 3rem;
+
+}
+
+footer .footer-icons>a>svg {
+    width: 40px;
+    height: auto;
+}
+
+footer .footer-icons>svg {
+    width: 40px;
+    height: auto;
+}
+
+footer .footer-icons>a {
+    justify-content: flex-end;
+}
+
+footer .footer-top-payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div>a {
+    justify-content: end;
+}
+
+@media(width < 1300px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    footer .footer-bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+}
+
+@media(width < 800px) {
+    footer {
+        text-align: center;
+        align-items: center;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer-bottom {
+        align-items: center;
+    }
+
+    footer .legal>span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
 }

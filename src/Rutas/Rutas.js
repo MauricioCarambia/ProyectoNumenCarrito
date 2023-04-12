@@ -5,6 +5,7 @@ import Inicio from "../Components/Routes/Inicio";
 import Productos from "../Components/Routes/Productos";
 import Nosotros from "../Components/Routes/Nosotros";
 import Contacto from "../Components/Routes/Contacto";
+import Footer from "../Components/Footer";
 
 
 const Rutas = () => {
@@ -17,6 +18,7 @@ const Rutas = () => {
                 <Route path="/Nosotros" element={<Nosotros />} />
                 <Route path="/Contacto" element={<Contacto />} />
             </Routes>
+            <Footer/>
         </Router>
     )
 }
