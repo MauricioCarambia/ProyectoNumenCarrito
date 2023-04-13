@@ -22,7 +22,6 @@ export default CardListProducts
 
 const list = {
   display: "flex",
-  margin: "100px",
   margin: "20px 100px",
   padding: "20px 100px",
   flexDirection: "row",

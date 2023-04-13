@@ -36,9 +36,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer-icons">
-                            <a href="https://www.facebook.com/"><SiFacebook/></a>
-                            <a href="https://www.instagram.com"><SiInstagram/></a>
-                            <a href="https://www.tiktok.com"><SiTiktok/></a>
+                            <a href="https://www.facebook.com/" target="_blanck"><SiFacebook/></a>
+                            <a href="https://www.instagram.com" target="_blanck"><SiInstagram/></a>
+                            <a href="https://www.tiktok.com" target="_blanck"><SiTiktok/></a>
                         </div>
                     </div>
                 </div>
