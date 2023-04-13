@@ -10,7 +10,7 @@ const Inicio = () => {
         data={products} />
       <p>Medios de pago</p>
       <p>Marcas que nos patrocinan</p>
-      
+
     </div>
   )
 }
