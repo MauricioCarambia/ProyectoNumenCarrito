@@ -1,50 +1,20 @@
 import React from 'react'
-import Button from './Button'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-
-
-const CardsProductos = (props) => {
+const CardsProductos = () => {
     return (
-       
-        <figure style={cajacard}>
-            <img style={imagen} src={props.card.img} alt="" />
-            <figcaption style={textocard}>
-                <h3>{props.card.titulo}</h3>
-                <p>{props.card.precio}</p>
-            </figcaption>
-            <Button />
-        </figure>
+        <Card style={{ width: '20rem' }}>
+            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1NCy2_YEOk1eg2ErwixdAUGQlIxZ2K3cMdieCURYmL9IhrhBXw0eZ26Yw5myZzlCsOIg&usqp=CAU" />
+            <Card.Body>
+                <Card.Title>Samsung S23</Card.Title>
+                <Card.Text>
+                    Maravilloso Samsung S23, lo ultimo en tecnologia.
+                </Card.Text>
+                <Button variant="primary">Agregar al carrito</Button>
+            </Card.Body>
+        </Card>
     )
 }
 
 export default CardsProductos
-
-const cajacard = {
-    height: "500px",
-    borderRadius: "3px",
-    width: "300px",
-    padding: "0px 10px 20px",
-    margin: "20px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "center",
-    border: "1px solid royalblue",
-    background: "white"
-}
-
-const imagen = {
-    width: "298px",
-    height: "300px",
-    borderRadius: "3px",
-    objectFit: "cover"
-}
-
-const textocard = {
-    height: "200px",
-    padding: "20px 0px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
-}
