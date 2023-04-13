@@ -1,17 +1,16 @@
-import CardsProductos from "./Components/CardsProductos";
-import Navbar from "./Components/Navbar";
+import './App.css';
 
-
+import Rutas from "./Rutas/Rutas";
 
 
 function App() {
   return (
     <>
-      <Navbar />
-      <CardsProductos />
-
+      <Rutas/>
     </>
   );
 }
 
 export default App;
+
+
