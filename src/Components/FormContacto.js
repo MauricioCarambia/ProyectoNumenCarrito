@@ -43,7 +43,7 @@ function FormContacto() {
                     </FloatingLabel>
                 </Form>
             <div className="mb-5">
-                <Button as="input" type="submit" value="Submit"  size="lg"/>{' '}
+                <Button as="input" type="submit" value="Enviar"  size="lg"/>{' '}
             </div>
             </div>
         </>
