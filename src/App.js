@@ -1,5 +1,5 @@
 import Rutas from "./Rutas/Rutas";
-
+import './App.css';
 
 
 

@@ -25,7 +25,7 @@ const cajacard = {
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    border: "1px solid royalblue",
+    border: "1px solid black",
     background: "white"
 }
 
