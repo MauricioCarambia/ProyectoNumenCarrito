@@ -3,7 +3,7 @@ import Button from "./Button"
 const CardsProductos = (props) => {
     return (
         <figure style={cajacard}>
-            <img style={imagen} src={props.card.img} alt="" />
+            <img style={imagen} src={props.card.img} alt={props.card.alt} />
             <figcaption style={textocard}>
                 <h3>{props.card.titulo}</h3>
                 <p>{props.card.precio}</p>
@@ -16,7 +16,7 @@ const CardsProductos = (props) => {
 export default CardsProductos
 
 const cajacard = {
-    height: "500px",
+    height: "400px",
     borderRadius: "3px",
     width: "300px",
     padding: "0px 10px 20px",
@@ -30,14 +30,14 @@ const cajacard = {
 }
 
 const imagen = {
-    width: "298px",
-    height: "300px",
+    width: "297px",
+    height: "245px",
     borderRadius: "3px",
     objectFit: "cover"
 }
 
 const textocard = {
-    height: "200px",
+    height: "100px",
     padding: "20px 0px",
     display: "flex",
     flexDirection: "column",
