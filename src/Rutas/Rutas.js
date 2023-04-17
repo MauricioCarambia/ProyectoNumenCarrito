@@ -6,11 +6,12 @@ import Productos from "../Components/Routes/Productos";
 import Nosotros from "../Components/Routes/Nosotros";
 import Contacto from "../Components/Routes/Contacto";
 import Footer from "../Components/Footer";
+import '../App.css';
 
 
 const Rutas = () => {
     return (
-        <Router>
+        <Router className='fondo'>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Inicio />} />

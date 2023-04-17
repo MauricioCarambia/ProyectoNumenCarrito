@@ -6,8 +6,8 @@ import CardListProducts from "../CardListProducts"
 
 const Productos = () => {
     return (
-        <div>
-            <h1>Productos</h1>
+        <div className='contacto_titulo'>
+            <h2>Productos</h2>
             <CardListProducts
                 data={products} />
         </div>

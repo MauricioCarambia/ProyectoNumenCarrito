@@ -1,10 +1,14 @@
 import CardsListEmpleados from "../CardsListEmpleados"
 
+
 const Nosotros = () => {
   return (
+    <div className='contacto_titulo'>
+            <h2>Empleados</h2>
     <CardsListEmpleados 
     data={empleados}
     />
+    </div>
   )
 }
 

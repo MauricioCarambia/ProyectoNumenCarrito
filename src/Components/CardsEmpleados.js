@@ -41,7 +41,7 @@ const figure = {
 }
 
 const divnombre = {
-    backgroundColor: "#B4D4EC",
+    backgroundColor: "#cee6fa",
     height: "100px",
     width: "200px",
 }

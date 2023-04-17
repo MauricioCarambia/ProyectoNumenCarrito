@@ -3,10 +3,8 @@ import CardListProducts from "../CardListProducts"
 
 const Inicio = () => {
   return (
-    <div >
-      
-      <p>Carusel</p>
-      
+    <div className='contacto_titulo' >
+      <p>Carusel</p>     
         <h2>Productos destacados</h2>
         <div style={list}>
         <CardListProducts
@@ -14,7 +12,6 @@ const Inicio = () => {
       </div>
       <p>Medios de pago</p>
       <p>Marcas que nos patrocinan</p>
-
     </div>
   )
 }
@@ -24,8 +21,6 @@ export default Inicio
 
 const list = {
   display: "flex",
-  margin: "20px 0px",
-  padding: "10px 0px",
   flexDirection: "row",
   flexWrap: "wrap",
   justifyContent: "space-evenly",
@@ -59,34 +54,6 @@ const products = [
     alt: "Nokia 1100",
     titulo: "Nokia 1100",
     precio: "$1000000"
-  },
-  {
-    id: 5,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TIGycPWJCXfY9MImJTDTYnhUHUQrZtX9966I3I5oVUq-9_-_K95d-9AnT7ZRAhWzZpc&usqp=CAU",
-    alt: "Xiaomi Redmi 10",
-    titulo: "Xiaomi Redmi 10",
-    precio: "$100000"
-  },
-  {
-    id: 6,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_m90PLbjdKRE4zIIDSBA8mpfeWXrAEwWqlw&usqp=CAU",
-    alt: "Motorola E20",
-    titulo: "Motorola E20",
-    precio: "$50000"
-  },
-  {
-    id: 7,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFgwVJQPltD-OsfSkXQyYmPCEIzGDj-0YPX1SSQqf8ECnpsKRmnN18rY9iR8wqQATzdBY&usqp=CAU",
-    alt: "Samsung Galaxy S6 Lite",
-    titulo: "Samsung Galaxy S6 Lite",
-    precio: "$150000"
-  },
-  {
-    id: 8,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5vnVgMfg-3nOgzSCuS3sWTW_WG2N9lUklBTBAQNfBydxW-JaFQKVh4becvNeMprZXTo&usqp=CAU",
-    alt: "Notebook Dell i",
-    titulo: "Notebook Dell i5",
-    precio: "$250000"
   }
 ]
 

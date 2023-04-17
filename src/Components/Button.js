@@ -9,7 +9,7 @@ const Button = () => {
 export default Button
 
 const boton = {
-    backgroundColor: "royalblue",
+    backgroundColor: "#006494",
     border: "none",
     borderRadius: "5px",
     color: "white",

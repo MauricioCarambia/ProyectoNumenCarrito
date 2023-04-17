@@ -17,7 +17,7 @@ export default CardsProductos
 
 const cajacard = {
     height: "400px",
-    borderRadius: "3px",
+    borderRadius: "10px",
     width: "300px",
     padding: "0px 10px 20px",
     margin: "20px",
@@ -26,13 +26,14 @@ const cajacard = {
     justifyContent: "space-around",
     alignItems: "center",
     border: "1px solid black",
-    background: "white"
+    background: "#cee6fa",
+    boxShadow: "#006494 2px 2px 2px"
 }
 
 const imagen = {
     width: "297px",
     height: "245px",
-    borderRadius: "3px",
+    borderRadius: "10px",
     objectFit: "cover"
 }
 

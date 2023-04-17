@@ -1,9 +1,14 @@
 import React from 'react'
 import Formulario from '../Formulario'
+import Preguntas from '../Preguntas'
+import '../../App.css'
 
 const Contacto = () => {
   return (
-    <Formulario/>
+    <div >    
+      <Formulario />     
+      <Preguntas />
+    </div>
   )
 }
 
