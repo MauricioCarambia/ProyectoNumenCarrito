@@ -4,6 +4,7 @@ import CardListProducts from "../CardListProducts"
 const Inicio = () => {
   return (
     <div >
+      
       <p>Carusel</p>
       
         <h2>Productos destacados</h2>
