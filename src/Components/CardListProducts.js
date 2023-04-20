@@ -1,12 +1,12 @@
 import CardsProductos from './CardsProductos'
-
+import '../App.css'
 
 
 
 
 const CardListProducts = (props) => {
   return (
-    <section style={list}>
+    <section className='productList'>
       {
         props.data.map(card => <CardsProductos
           key={card.id}
@@ -20,11 +20,3 @@ const CardListProducts = (props) => {
 
 export default CardListProducts
 
-const list = {
-  display: "flex",
-  margin: "20px 150px",
-  padding: "20px 0px",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "space-around"
-}

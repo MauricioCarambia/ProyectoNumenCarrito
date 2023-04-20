@@ -297,3 +297,54 @@ nav {
    background-size: contain;
     
 } */
+
+
+/********Productos*********/
+
+.productList{
+    display: flex;
+    margin: 20px 150px;
+    padding: 20px 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+/********** Media Query **************/
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .formulario {
+        width: 90%;
+    }
+
+    .accordion {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .formulario {
+        width: 90%;
+
+    }
+
+    .accordion {
+        width: 90%;
+    }
+    .productList{
+        margin: 20px;
+        padding: 20px 0px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .formulario {
+        width: 90%;
+    }
+
+    .accordion {
+        width: 90%;
+    }
+}
