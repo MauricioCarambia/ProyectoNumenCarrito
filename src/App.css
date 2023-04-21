@@ -313,6 +313,15 @@ nav {
     }
 }
 
+.listEmpleados{
+        display: flex;
+        margin: 20px 95px;
+        padding: 20px 120px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     .formulario {
@@ -336,6 +345,7 @@ nav {
         gap: 16px;
         flex-direction: column-reverse;
     }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -368,6 +378,7 @@ nav {
         gap: 16px;
         flex-direction: column-reverse;
     }
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -392,5 +403,14 @@ nav {
     footer .footer-bottom {
         gap: 16px;
         flex-direction: column-reverse;
+    }
+    
+    .listEmpleados{
+        display: flex;
+        margin: 20px 45px;
+        padding: 20px 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }

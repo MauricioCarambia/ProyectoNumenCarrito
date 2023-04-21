@@ -36,7 +36,7 @@ export default CardsEmpleados
 const figure = {
     height: "531px",
     width: "360px",
-    border: "2px solid black",
+    border: "3px solid black",
 
 }
 

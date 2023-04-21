@@ -1,17 +1,10 @@
 import Cardsempleados from "./CardsEmpleados"
-
+import "../App.css"
 
 
 const CardsListEmpleados = (props) => {
   return (
-    <section style={{
-      display: "flex",
-      margin: "20px 100px",
-      padding: "20px 150px",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-around"
-    }}>
+    <section className="listEmpleados">
       {
         props.data.map(card => <Cardsempleados
           key={card.id}
