@@ -1,12 +1,17 @@
 
 import { Link } from "react-router-dom"
-
+import { BsCart4 } from "react-icons/bs";
 
 import '../App.css'
 
 
 const Navbar = () => {
-  return (     
+  return (
+    <div>
+      <div class="alert" role="alert" style={alerta}>
+        <strong>Envios</strong> sin cargo desde $50.000!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div id='idNav' class="container-fluid" >
           <button id='buttonHome' class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +27,6 @@ const Navbar = () => {
                   Productos
                 </Link>
                 <ul id="menuProducts" className="dropdown-menu" aria-labelledby="navbarDropdown">
-
                   <li><Link to="/Productos" id='productos' className="dropdown-item" >Celulares</Link></li>
                   <li><Link to="/Productos" id='productos' className="dropdown-item" >Tablets</Link></li>
                   <li><Link to="/Productos" id='productos' className="dropdown-item" >Notebooks</Link></li>
@@ -36,7 +40,9 @@ const Navbar = () => {
                 <Link to="/Contacto" id="buttonNav" className="nav-link active" >Contacto</Link>
               </li>
             </ul>
-
+            <li class="nav-item">
+              <Link to="/Carrito" id="buttonNav" className="nav-link active" ><BsCart4/></Link>
+            </li>
             <li id="micuenta" class="nav-item dropdown"  >
               <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Mi cuenta
@@ -58,7 +64,8 @@ const Navbar = () => {
             </li>
           </div>
         </div>
-      </nav>  
+      </nav>
+    </div>
   )
 }
 
@@ -66,8 +73,13 @@ export default Navbar
 
 
 
-
-
+const alerta = {
+  backgroundColor:"#cee6fa",
+  height: "40px",
+  textAlign: "center",
+  padding: "5px",
+  fontSize: "20px"
+}
 
 
 

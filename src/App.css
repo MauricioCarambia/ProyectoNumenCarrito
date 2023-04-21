@@ -91,43 +91,6 @@ footer div>a {
     justify-content: end;
 }
 
-@media (width < 1300px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    footer .footer-top>div {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer .footer-bottom {
-        gap: 16px;
-        flex-direction: column-reverse;
-    }
-}
-
-@media (width < 800px) {
-    footer {
-        text-align: center;
-        align-items: center;
-    }
-
-    footer .footer-top>div {
-        grid-template-columns: 1fr;
-    }
-
-    footer .footer-bottom {
-        align-items: center;
-    }
-
-    footer .legal>span {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 2px;
-    }
-}
 
 /******************* Navbar *****************/
 nav {
@@ -291,26 +254,65 @@ nav {
     box-shadow: #006494 2px 2px 2px;
 }
 
-/* .fondo{
-    background-image: url(./fondo.jpg);
-    background-repeat: no-repeat;
-   background-size: contain;
-    
-} */
-
 
 /********Productos*********/
 
-.productList{
+.productList {
     display: flex;
     margin: 20px 150px;
     padding: 20px 0px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-  }
+    justify-content: space-evenly;
+}
 
 /********** Media Query **************/
+
+@media only screen and (width < 576px) {
+    .formulario {
+        width: 90%;
+    }
+
+    .accordion {
+        width: 90%;
+    }
+    footer {
+        text-align: center;
+        align-items: center;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer-bottom {
+        align-items: center;
+    }
+
+    footer .legal>span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+    .logo{
+        margin: auto;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .footer-bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+}
+
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     .formulario {
@@ -319,6 +321,20 @@ nav {
 
     .accordion {
         width: 90%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .footer-bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
     }
 }
 
@@ -331,12 +347,27 @@ nav {
     .accordion {
         width: 90%;
     }
-    .productList{
+
+    .productList {
         margin: 20px;
         padding: 20px 0px;
         flex-wrap: wrap;
         justify-content: space-evenly;
-      }
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .footer-bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -346,5 +377,20 @@ nav {
 
     .accordion {
         width: 90%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    footer .footer-top>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .footer-bottom {
+        gap: 16px;
+        flex-direction: column-reverse;
     }
 }

@@ -7,6 +7,7 @@ import Nosotros from "../Components/Routes/Nosotros";
 import Contacto from "../Components/Routes/Contacto";
 import Footer from "../Components/Footer";
 import '../App.css';
+import Carrito from "../Components/Routes/Carrito";
 
 
 const Rutas = () => {
@@ -18,6 +19,7 @@ const Rutas = () => {
                 <Route path="/Productos" element={<Productos />} />
                 <Route path="/Nosotros" element={<Nosotros />} />
                 <Route path="/Contacto" element={<Contacto />} />
+                <Route path="/Carrito" element={<Carrito />} />
             </Routes>
             <Footer/>
         </Router>
