@@ -1,10 +1,10 @@
 import CardListProducts from "../CardListProducts"
-
+import Carrusel from "../Carrusel"
 
 const Inicio = () => {
   return (
     <div className='contacto_titulo' >
-      <p>Carusel</p>     
+        <Carrusel />
         <h2>Productos destacados</h2>
         <div style={list}>
         <CardListProducts
