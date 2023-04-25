@@ -266,9 +266,24 @@ nav {
     justify-content: space-evenly;
 }
 
+.container_carrusel {
+    width: 1600px;
+    height: 400px;
+    margin: auto;
+}
+
+.carrusel_img {
+    width: 800px;
+    height: 400px;
+    object-fit: fill;
+
+}
+
+
 /********** Media Query **************/
 
 @media only screen and (width < 576px) {
+
     .formulario {
         width: 90%;
     }
@@ -276,6 +291,7 @@ nav {
     .accordion {
         width: 90%;
     }
+
     footer {
         text-align: center;
         align-items: center;
@@ -294,9 +310,11 @@ nav {
         margin-right: 0;
         margin-bottom: 2px;
     }
-    .logo{
+
+    .logo {
         margin: auto;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -313,17 +331,19 @@ nav {
     }
 }
 
-.listEmpleados{
-        display: flex;
-        margin: 20px 95px;
-        padding: 20px 120px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+.listEmpleados {
+    display: flex;
+    margin: 20px 95px;
+    padding: 20px 120px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+
+
     .formulario {
         width: 90%;
     }
@@ -331,6 +351,7 @@ nav {
     .accordion {
         width: 90%;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -364,6 +385,7 @@ nav {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -404,8 +426,8 @@ nav {
         gap: 16px;
         flex-direction: column-reverse;
     }
-    
-    .listEmpleados{
+
+    .listEmpleados {
         display: flex;
         margin: 20px 45px;
         padding: 20px 50px;

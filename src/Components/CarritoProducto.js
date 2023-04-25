@@ -11,7 +11,7 @@ const CarritoProducto = (props) => {
                     <h3>{data.titulo}</h3>
                     <h4>{data.precio}</h4>
                 </figcaption>
-                <button onClick={() => addToCart(data.id)}>Agregar</button>
+                <button style={boton} onClick={() => addToCart(data.id)}>Agregar al carrito</button>
             </figure>
 
         </div>
@@ -20,6 +20,14 @@ const CarritoProducto = (props) => {
 
 export default CarritoProducto
 
+const boton = {
+    backgroundColor: "#006494",
+    border: "none",
+    borderRadius: "5px",
+    color: "white",
+    padding: "5px 10px",
+
+}
 const cajacard = {
     height: "400px",
     borderRadius: "10px",

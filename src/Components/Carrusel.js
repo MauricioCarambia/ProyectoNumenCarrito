@@ -1,8 +1,13 @@
 import React from 'react'
 import Img from '../imagenes-carrusel/celuar.jpg'
+import Img2 from '../imagenes-carrusel/notebook.jpg'
+import Img3 from '../imagenes-carrusel/reloj.jpg'
+import "../App.css"
+
+
 const Carrusel = () => {
-    return(
-        <div>
+    return (
+        <div >
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -10,14 +15,14 @@ const Carrusel = () => {
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={Img} class="d-block w-100" alt="..."/>
+                    <div className="carousel-item active ">
+                        <img src={Img} class="d-block w-100 carrusel_img" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="./imagenes-carrusel/celular" class="d-block w-100" alt="..."/>
+                        <img src={Img2} class="d-block w-100 carrusel_img" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="./imagenes-carrusel/reloj" class="d-block w-100" alt="..."/>
+                        <img src={Img3} class="d-block w-100 carrusel_img" alt="..." />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

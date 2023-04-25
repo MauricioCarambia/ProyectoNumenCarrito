@@ -4,9 +4,9 @@ import Carrusel from "../Carrusel"
 const Inicio = () => {
   return (
     <div className='contacto_titulo' >
-        <Carrusel />
-        <h2>Productos destacados</h2>
-        <div style={list}>
+      <Carrusel />
+      <h2>Productos destacados</h2>
+      <div style={list}>
         <CardListProducts
           data={products} />
       </div>
