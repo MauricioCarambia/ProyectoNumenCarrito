@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer } from 'react'
 import { carritoInitialState, carritoReducer } from './CarritoReducer';
 import CarritoProducto from './CarritoProducto';
 import CarritoItems from './CarritoItems';
@@ -8,6 +8,7 @@ import "../App.css"
 const Cart = () => {
 
     const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
+    const [Cart, setCart] = useState(setCart);
     const { products, cart } = state;
 
     const updateState = async () => {
@@ -27,10 +28,21 @@ const Cart = () => {
             }
         })
     }
+
+
     useEffect(() => {
         updateState()
-
+        let data = localStorage.getItem("cart")
+        if (data) {
+            setCart(JSON.parse(data))
+        }
     }, [])
+
+    useEffect(() => {
+
+        localStorage.setItem("cart", JSON.stringify(Cart))
+        console.log(Cart)
+    }, [Cart])
 
 
     const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
