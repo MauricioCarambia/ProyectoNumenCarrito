@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
 import {FaUserCircle} from "react-icons/fa"
@@ -81,7 +80,6 @@ const alerta = {
   padding: "5px",
   fontSize: "20px"
 }
-
 
 
 
