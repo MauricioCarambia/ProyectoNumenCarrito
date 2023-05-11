@@ -57,13 +57,5 @@
       "precio": 250000
     }
   ],
-  "cart": [
-    {
-      "id": 8,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5vnVgMfg-3nOgzSCuS3sWTW_WG2N9lUklBTBAQNfBydxW-JaFQKVh4becvNeMprZXTo&usqp=CAU",
-      "alt": "Notebook Dell i",
-      "titulo": "Notebook Dell i5",
-      "precio": 250000
-    }
-  ]
+  "cart": []
 }

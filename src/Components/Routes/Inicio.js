@@ -1,13 +1,49 @@
-import CardListProducts from "../CardListProducts"
+import { useEffect, useReducer } from "react";
 import Carrusel from "../Carrusel"
+import Productos from "./Productos"
+import { carritoInitialState, carritoReducer } from "../CarritoReducer";
+import { TYPES } from "../actions";
+import axios from "axios";
 
 const Inicio = () => {
+
+  const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
+  // const [Cart, setCart] = useState();
+  const { products, cart } = state;
+
+  const updateState = async () => {
+    const ENDPOINT = {
+      productsList: "http://localhost:5000/products",
+      cartList: "http://localhost:5000/cart"
+    }
+    const resProducts = await axios.get(ENDPOINT.productsList);
+    const resCart = await axios.get(ENDPOINT.cartList);
+    const productsList = await resProducts.data;
+    const cartList = await resCart.data;
+
+    dispatch({
+      type: TYPES.READ_STATE, payload: {
+        products: productsList,
+        cart: cartList
+      }
+    })
+  }
+
+
+  useEffect(() => {
+    updateState()
+
+  }, [])
+
+  const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
+
+
   return (
     <div className='contacto_titulo' >
       <Carrusel />
       <h2>Productos destacados</h2>
       <div style={list}>
-        <CardListProducts
+        <Productos
           data={products} />
       </div>
       <p>Medios de pago</p>
@@ -25,35 +61,3 @@ const list = {
   flexWrap: "wrap",
   justifyContent: "space-evenly",
 }
-
-const products = [
-  {
-    id: 1,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBFZGMmrfaEmiB_AX3vKfdozQJCIm3wor9w&usqp=CAU",
-    alt: "Motorola G9",
-    titulo: "Motorola G9",
-    precio: "$80000"
-  },
-  {
-    id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRNmXnENOc58p4BFvUnpm4MqmKuhM75GpQg&usqp=CAU",
-    alt: "Iphone 12",
-    titulo: "Iphone 12",
-    precio: "$200000"
-  },
-  {
-    id: 3,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ-tr5LekIdymLQDB_90wWfIOfXdg7o_HQbLOVM-1eqdGn7fkHtCmy4Bjp34cr4M3aUCw&usqp=CAU",
-    alt: "Samsung S23",
-    titulo: "Samsung S23",
-    precio: "$150000"
-  },
-  {
-    id: 4,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzy3f3U8OjJkrOdy54HpyOhI2I9yVa7vg6VA&usqp=CAU",
-    alt: "Nokia 1100",
-    titulo: "Nokia 1100",
-    precio: "$1000000"
-  }
-]
-
