@@ -1,7 +1,6 @@
-
 import { Link } from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
-
+import {FaUserCircle} from "react-icons/fa"
 import '../App.css'
 
 
@@ -44,9 +43,9 @@ const Navbar = () => {
             <li id="liCart" class="nav-item">
               <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4/></Link>
             </li>
-            <li id="micuenta" class="nav-item dropdown"  >
+            <li id="liMicuenta" class="nav-item dropdown"  >
               <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Mi cuenta
+              <FaUserCircle/>
               </a>
               <ul id='ulLog' class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form className='formLog'>
@@ -81,7 +80,6 @@ const alerta = {
   padding: "5px",
   fontSize: "20px"
 }
-
 
 
 
