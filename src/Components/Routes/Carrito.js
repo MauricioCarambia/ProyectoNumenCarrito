@@ -10,8 +10,8 @@ import { TYPES } from '../actions';
 const Carrito = () => {
 
   const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
-  // const [Cart, setCart] = useState();
   const { products, cart } = state;
+
 
   const updateState = async () => {
     const ENDPOINT = {
@@ -31,21 +31,9 @@ const Carrito = () => {
     })
   }
 
-
   useEffect(() => {
     updateState()
-    // let data = localStorage.getItem("cart")
-    // if (data) {
-    //     setCart(JSON.parse(data))
-    // }
   }, [])
-
-  // useEffect(() => {
-
-  //     localStorage.setItem("cart", JSON.stringify(Cart))
-  //     console.log(Cart)
-  // }, [Cart])
-
 
   const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
 
@@ -88,8 +76,8 @@ const Carrito = () => {
           return <CarritoItems key={item.id}
             data={item} deleteFromCart={deleteFromCart} />
         })}
+
       </div>
-      {/* <button style={boton} onClick={clearCart}>Limpiar Carrito</button> */}
 
       <button type="button" style={boton} class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Eliminar todos
@@ -108,7 +96,7 @@ const Carrito = () => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-              <button type="button" onClick={clearCart} class="btn btn-primary">Sí</button>
+              <button type="button" onClick={clearCart} data-bs-dismiss="modal" class="btn btn-primary">Sí</button>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const CarritoItems = (props) => {
     const { data, deleteFromCart } = props;
 
     return (
-        <div >
+        <div>
             {/* <h3>{data.titulo}</h3>
             <h4>${data.precio}</h4>
             <h5>Cantidad: {data.cantidad} unidades</h5>
