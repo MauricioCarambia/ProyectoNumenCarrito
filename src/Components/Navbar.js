@@ -2,9 +2,12 @@ import { Link } from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa"
 import '../App.css'
+import { useContext } from "react";
+import CartContext from "./Contexts/CartContextProvider";
 
 
 const Navbar = () => {
+  const { cart } = useContext(CartContext)
   return (
     <div>
       <div class="alert" role="alert" style={alerta}>
@@ -41,7 +44,7 @@ const Navbar = () => {
             </ul>
 
             <li id="liCart" class="nav-item">
-              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4 /><span class="badge text-bg-secondary">4</span></Link>
+              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4 /><span class="badge text-bg-primary">{cart.length}</span></Link>
             </li>
 
             <li id="liMicuenta" class="nav-item dropdown"  >
