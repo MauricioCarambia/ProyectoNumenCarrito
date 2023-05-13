@@ -323,7 +323,31 @@ a::after {
 
 }
 
+/*************Carrusel2****************/
+#carr2{
+    width:1000px;
+    margin: auto;
+}
+#divCaption2{
+    background-color: rgb(0, 100, 148);
+    border-radius: 20px;
+    
+}
+#divCaption2 h5{
+    font-size: 2.25rem;
+    font-family: revert;
+    color:#ffffff
+}
 
+#divCaption2 p{
+    
+    font-family: revert;
+    color:#ffffff
+}
+
+#imgMarca{
+    height: 318px;
+}
 /********** Media Query **************/
 
 @media only screen and (width < 576px) {

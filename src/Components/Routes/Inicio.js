@@ -4,6 +4,8 @@ import Productos from "./Productos"
 import { carritoInitialState, carritoReducer } from "../CarritoReducer";
 import { TYPES } from "../actions";
 import axios from "axios";
+import CarruselMediosDePago from "../CarruselMediosDePago";
+import CarruselMarcas from "../CarruselMarcas";
 
 const Inicio = () => {
 
@@ -46,8 +48,10 @@ const Inicio = () => {
         <Productos
           data={products} />
       </div>
-      <p>Medios de pago</p>
-      <p>Marcas que nos patrocinan</p>
+      <h2>Medios de pago</h2>
+      <CarruselMediosDePago/>
+      <h2>Marcas que nos patrocinan</h2>
+      <CarruselMarcas/>
     </div>
   )
 }

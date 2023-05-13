@@ -36,5 +36,6 @@ const Carrusel = () => {
             </div>
         </div>
     )
+      
 }
 export default Carrusel
