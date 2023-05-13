@@ -2,21 +2,20 @@ import React, { useContext } from 'react'
 import CarritoItems from '../CarritoItems';
 import "../../App.css"
 import CartContext from '../Contexts/CartContextProvider';
-import CarritoProducto from '../CarritoProducto';
 
 const Carrito = () => {
-  const { products, cart, addToCart, deleteFromCart, clearCart } = useContext(CartContext)
+  const { products, cart, deleteFromCart, clearCart } = useContext(CartContext)
 
   return (
     <div>
       <h1>Carrito de compras</h1>
-      <h2>Productos</h2>
+      {/* <h2>Productos</h2>
       <div style={card}>
         {products.map(product => {
           return <CarritoProducto key={products.id}
             data={product} addToCart={addToCart} />
         })}
-      </div>
+      </div> */}
       <h2>Carrito</h2>
       <div >
         <table class="table">
@@ -54,7 +53,7 @@ const Carrito = () => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-              <button type="button" onClick={clearCart} class="btn btn-primary">Sí</button>
+              <button type="button" onClick={clearCart} data-bs-dismiss="modal" class="btn btn-primary">Sí</button>
             </div>
           </div>
         </div>
@@ -65,10 +64,7 @@ const Carrito = () => {
 
 export default Carrito
 
-const card = {
-  display: "flex",
-  flexDirection: "row"
-}
+
 const boton = {
   backgroundColor: "red",
   border: "none",

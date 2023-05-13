@@ -6,7 +6,7 @@ import CartContext from "../Contexts/CartContextProvider";
 
 const Productos = () => {
 
-    const { products, cart, addToCart, deleteFromCart, clearCart } = useContext(CartContext)
+    const { products, addToCart } = useContext(CartContext)
 
     return (
         <section className='productList'>
@@ -26,5 +26,7 @@ export default Productos
 
 const card = {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
 }

@@ -55,7 +55,7 @@ export function carritoReducer(state, action) {
         }
 
         case TYPES.CLEAR_CART: {
-            return carritoInitialState;
+            return carritoInitialState
         }
 
         default:

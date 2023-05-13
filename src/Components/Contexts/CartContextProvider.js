@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react"
+import { createContext, useEffect, useReducer, useState } from "react"
 import { carritoInitialState, carritoReducer } from "../CarritoReducer";
 import { TYPES } from "../actions";
 import axios from "axios";
@@ -10,6 +10,7 @@ const CartContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
     const { products, cart } = state;
+
 
     const updateState = async () => {
         const ENDPOINT = {
@@ -31,10 +32,6 @@ const CartContextProvider = ({ children }) => {
 
     useEffect(() => {
         updateState()
-        // let data = localStorage.getItem("cart")
-        // if (data) {
-        //     setCart(JSON.parse(data))
-        // }
     }, [])
 
     const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };

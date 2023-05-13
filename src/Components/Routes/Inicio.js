@@ -9,7 +9,7 @@ const Inicio = () => {
 
   const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
   // const [Cart, setCart] = useState();
-  const { products, cart } = state;
+  const { products } = state;
 
   const updateState = async () => {
     const ENDPOINT = {
