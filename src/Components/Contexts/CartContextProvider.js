@@ -32,8 +32,8 @@ const CartContextProvider = ({ children }) => {
 
     useEffect(() => {
         updateState()
-        localStorage.setItem("localCart", JSON.stringify(cart));
-    }, [cart])
+        // localStorage.setItem("localCart", JSON.stringify(cart));
+    }, [])
 
     const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
 
