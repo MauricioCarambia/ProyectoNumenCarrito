@@ -41,12 +41,13 @@ const Navbar = () => {
             </ul>
 
             <li id="liCart" class="nav-item">
-              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4 /></Link>
+              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4 /><span class="badge text-bg-secondary">4</span></Link>
             </li>
+
             <li id="liMicuenta" class="nav-item dropdown"  >
-              <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <FaUserCircle />
-              </a>
+              {/* <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
+              <FaUserCircle />
+              {/* </a> */}
               <ul id='ulLog' class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form className='formLog'>
                   <label className='label' for="usuario" >Usuario<input class='inputLog' id="usuario" type="text"></input></label>

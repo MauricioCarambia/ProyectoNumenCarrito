@@ -3,7 +3,7 @@ import CartContext from "./Contexts/CartContextProvider"
 
 const CardsProductos = (props) => {
     const { data } = props;
-    const { products, addToCart } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
     return (
         <figure style={cajacard}>
             <img style={imagen} src={data.img} alt={data.alt} />

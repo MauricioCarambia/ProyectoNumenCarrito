@@ -1,6 +1,7 @@
 import { TYPES } from "./actions";
 
 export const carritoInitialState = {
+    // JSON.parse(localStorage.getItem("localCart")),
     products: [],
     cart: []
 };

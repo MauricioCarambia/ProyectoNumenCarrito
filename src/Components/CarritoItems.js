@@ -4,7 +4,7 @@ import CartContext from './Contexts/CartContextProvider'
 
 const CarritoItems = (props) => {
     const { data } = props;
-    const { products, deleteFromCart } = useContext(CartContext)
+    const { deleteFromCart } = useContext(CartContext)
 
     return (
         <div>
