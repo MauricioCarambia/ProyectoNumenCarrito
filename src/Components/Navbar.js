@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
-import {FaUserCircle} from "react-icons/fa"
+import { FaUserCircle } from "react-icons/fa"
 import '../App.css'
 
 
@@ -21,7 +21,7 @@ const Navbar = () => {
               <li class="nav-item">
                 <Link to="/" class="nav-link active" id="buttonNav" aria-current="page" >Inicio</Link>
               </li>
-              <li  class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <Link to="/Productos" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Productos
                 </Link>
@@ -39,13 +39,13 @@ const Navbar = () => {
                 <Link to="/Contacto" id="buttonNav" className="nav-link active" >Contacto</Link>
               </li>
             </ul>
-            
+
             <li id="liCart" class="nav-item">
-              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4/></Link>
+              <Link to="/Carrito" id="buttonCart" className="nav-link active" ><BsCart4 /></Link>
             </li>
             <li id="liMicuenta" class="nav-item dropdown"  >
               <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <FaUserCircle/>
+                <FaUserCircle />
               </a>
               <ul id='ulLog' class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form className='formLog'>
@@ -74,7 +74,7 @@ export default Navbar
 
 
 const alerta = {
-  backgroundColor:"#cee6fa",
+  backgroundColor: "#cee6fa",
   height: "40px",
   textAlign: "center",
   padding: "5px",

@@ -1,14 +1,17 @@
-import Button from "./Button"
+import { useContext } from "react"
+import CartContext from "./Contexts/CartContextProvider"
 
 const CardsProductos = (props) => {
+    const { data } = props;
+    const { products, addToCart } = useContext(CartContext)
     return (
         <figure style={cajacard}>
-            <img style={imagen} src={props.card.img} alt={props.card.alt} />
+            <img style={imagen} src={data.img} alt={data.alt} />
             <figcaption style={textocard}>
-                <h3>{props.card.titulo}</h3>
-                <p>{props.card.precio}</p>
+                <h3>{data.titulo}</h3>
+                <p>{data.precio}</p>
             </figcaption>
-            <Button />
+            <button style={boton} onClick={() => addToCart(data.id)}>Agregar al carrito</button>
         </figure>
     )
 }
@@ -44,4 +47,12 @@ const textocard = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center"
+}
+const boton = {
+    backgroundColor: "#006494",
+    border: "none",
+    borderRadius: "5px",
+    color: "white",
+    padding: "5px 10px",
+
 }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from './Contexts/CartContextProvider'
 
 
 const CarritoProducto = (props) => {
-    const { data, addToCart } = props;
+    const { data } = props;
+    const { products, addToCart } = useContext(CartContext)
     return (
         <div>
             <figure style={cajacard}>
