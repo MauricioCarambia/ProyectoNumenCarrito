@@ -8,7 +8,7 @@ const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(carritoReducer, [], carritoInitialState);
+    const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
     const { products, cart } = state;
 
 
@@ -32,8 +32,8 @@ const CartContextProvider = ({ children }) => {
 
     useEffect(() => {
         updateState()
-        localStorage.setItem("localCart", JSON.stringify(cart));
-    }, [cart])
+        // localStorage.setItem("localCart", JSON.stringify(cart));
+    }, [])
 
     const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
 
