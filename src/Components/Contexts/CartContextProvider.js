@@ -8,7 +8,7 @@ const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(carritoReducer, [], carritoInitialState);
+    const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
     const { products, cart } = state;
 
 
