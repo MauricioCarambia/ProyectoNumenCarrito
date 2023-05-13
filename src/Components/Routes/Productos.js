@@ -1,50 +1,32 @@
-import { useEffect, useReducer } from "react";
-import { carritoInitialState, carritoReducer } from "../CarritoReducer";
+import "../../App.css"
+import { useContext } from "react";
 import CardsProductos from "../CardsProductos";
-import { TYPES } from "../actions";
-import axios from "axios";
+import CartContext from "../Contexts/CartContextProvider";
+
 
 const Productos = () => {
-    const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
-    // const [Cart, setCart] = useState();
-    const { products, cart } = state;
 
-    const updateState = async () => {
-        const ENDPOINT = {
-            productsList: "http://localhost:5000/products",
-            cartList: "http://localhost:5000/cart"
-        }
-        const resProducts = await axios.get(ENDPOINT.productsList);
-        const resCart = await axios.get(ENDPOINT.cartList);
-        const productsList = await resProducts.data;
-        const cartList = await resCart.data;
-
-        dispatch({
-            type: TYPES.READ_STATE, payload: {
-                products: productsList,
-                cart: cartList
-            }
-        })
-    }
-
-
-    useEffect(() => {
-        updateState()
-
-    }, [])
-
-    const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
+    const { products, addToCart } = useContext(CartContext)
 
     return (
         <section className='productList'>
             {
-                products.map(card => <CardsProductos
-                    key={card.id}
-                    card={card} />
-                )
+                <div style={card}>
+                    {products.map(product => {
+                        return <CardsProductos key={products.id}
+                            data={product} addToCart={addToCart} />
+                    })}
+                </div>
             }
         </section>
     )
 }
 
 export default Productos
+
+const card = {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+}
