@@ -31,7 +31,7 @@ const CardsProductos = (props) => {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Agregar</button>
                         </div>
                     </div>
                 </div>

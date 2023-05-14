@@ -1,43 +1,14 @@
-import { useEffect, useReducer } from "react";
+import { useContext } from "react";
 import Carrusel from "../Carrusel"
 import Productos from "./Productos"
-import { carritoInitialState, carritoReducer } from "../CarritoReducer";
-import { TYPES } from "../actions";
-import axios from "axios";
+
 import CarruselMediosDePago from "../CarruselMediosDePago";
 import CarruselMarcas from "../CarruselMarcas";
+import CartContext from "../Contexts/CartContextProvider";
 
 const Inicio = () => {
+  const { products } = useContext(CartContext)
 
-  const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
-  // const [Cart, setCart] = useState();
-  const { products } = state;
-
-  const updateState = async () => {
-    const ENDPOINT = {
-      productsList: "http://localhost:5000/products",
-      cartList: "http://localhost:5000/cart"
-    }
-    const resProducts = await axios.get(ENDPOINT.productsList);
-    const resCart = await axios.get(ENDPOINT.cartList);
-    const productsList = await resProducts.data;
-    const cartList = await resCart.data;
-
-    dispatch({
-      type: TYPES.READ_STATE, payload: {
-        products: productsList,
-        cart: cartList
-      }
-    })
-  }
-
-
-  useEffect(() => {
-    updateState()
-
-  }, [])
-
-  // const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
 
 
   return (
@@ -49,9 +20,9 @@ const Inicio = () => {
           data={products} />
       </div>
       <h2>Medios de pago</h2>
-      <CarruselMediosDePago/>
+      <CarruselMediosDePago />
       <h2>Marcas que nos patrocinan</h2>
-      <CarruselMarcas/>
+      <CarruselMarcas />
     </div>
   )
 }

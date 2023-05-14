@@ -150,7 +150,7 @@ nav {
 
 a::after {
     content: none !important;
-  }
+}
 
 #liMicuenta {
     display: flex;
@@ -268,6 +268,7 @@ a::after {
 .contacto_titulo>h2 {
     text-transform: uppercase;
     margin: 20px 0px 10px;
+    padding: 20px 0px;
     text-align: center;
     text-decoration: underline;
     color: black;
@@ -324,30 +325,34 @@ a::after {
 }
 
 /*************Carrusel2****************/
-#carr2{
-    width:1000px;
+#carr2 {
+    width: 1000px;
     margin: auto;
+    padding: 20px 0px;
 }
-#divCaption2{
+
+#divCaption2 {
     background-color: rgb(0, 100, 148);
     border-radius: 20px;
-    
+
 }
-#divCaption2 h5{
+
+#divCaption2 h5 {
     font-size: 2.25rem;
     font-family: revert;
-    color:#ffffff
+    color: #ffffff
 }
 
-#divCaption2 p{
-    
+#divCaption2 p {
+
     font-family: revert;
-    color:#ffffff
+    color: #ffffff
 }
 
-#imgMarca{
+#imgMarca {
     height: 318px;
 }
+
 /********** Media Query **************/
 
 @media only screen and (width < 576px) {

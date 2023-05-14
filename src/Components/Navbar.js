@@ -48,9 +48,9 @@ const Navbar = () => {
             </li>
 
             <li id="liMicuenta" class="nav-item dropdown"  >
-              <a id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <FaUserCircle />
-               </a> 
+              <div id="miCuenta" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <FaUserCircle />
+              </div>
               <ul id='ulLog' class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form className='formLog'>
                   <label className='label' for="usuario" >Usuario<input class='inputLog' id="usuario" type="text"></input></label>
