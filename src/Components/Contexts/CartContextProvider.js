@@ -9,7 +9,7 @@ const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
-    // const [cartStorage, setcartStorage] = useState([])
+    const [cartStorage, setcartStorage] = useState([])
     const { products, cart } = state;
 
 
@@ -32,14 +32,23 @@ const CartContextProvider = ({ children }) => {
     }
     useEffect(() => {
         updateState()
-        JSON.parse(localStorage.getItem("cartStorage"))
+        const cartItems = JSON.parse(localStorage.getItem("cartStorage"))
+        if (cartItems) {
+            setcartStorage(cartItems)
+        }
 
     }, [])
+    useEffect(() => {
+
+        localStorage.setItem("cartStorage", JSON.stringify(cart))
+        console.log(cart);
+
+    }, [cart])
 
 
     const addToCart = (id) => {
-        localStorage.setItem("cartStorage", JSON.stringify(cart))
-        console.log(cart);
+        // localStorage.setItem("cartStorage", JSON.stringify(cart))
+        // console.log(cart);
         dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
     };
