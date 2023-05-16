@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react"
+import { createContext, useEffect, useReducer, useState } from "react"
 import { carritoInitialState, carritoReducer } from "../CarritoReducer";
 import { TYPES } from "../actions";
 import axios from "axios";
@@ -9,6 +9,7 @@ const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(carritoReducer, carritoInitialState);
+    // const [cartStorage, setcartStorage] = useState([])
     const { products, cart } = state;
 
 
@@ -29,13 +30,19 @@ const CartContextProvider = ({ children }) => {
             }
         })
     }
-
     useEffect(() => {
         updateState()
-        // localStorage.setItem("localCart", JSON.stringify(cart));
+        JSON.parse(localStorage.getItem("cartStorage"))
+
     }, [])
 
-    const addToCart = (id) => { dispatch({ type: TYPES.ADD_TO_CART, payload: id }) };
+
+    const addToCart = (id) => {
+        localStorage.setItem("cartStorage", JSON.stringify(cart))
+        console.log(cart);
+        dispatch({ type: TYPES.ADD_TO_CART, payload: id })
+
+    };
 
     const deleteFromCart = (id, eliminarTodos) => {
         if (eliminarTodos) {
